@@ -5,16 +5,15 @@ android {
     defaultConfig {
         applicationId "com.example.qustzj.application"
         minSdkVersion 15
-        targetSdkVersion 27
+        targetSdkVersion 21
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        externalNativeBuild{
-            cmake{
+        externalNativeBuild {
+            cmake {
 //                abiFilters "armeabi-v7a"
 //                arguments '-DANDROID_STLstlport_static'
                 cppFlags "-frtti -fexceptions"
-
             }
         }
     }
@@ -24,16 +23,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
-    externalNativeBuild{
-        cmake{
+    externalNativeBuild {
+        cmake {
             path "CMakeLists.txt"
         }
     }
+    buildToolsVersion '26.0.2'
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     testImplementation 'junit:junit:4.12'

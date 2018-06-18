@@ -11,4 +11,5 @@ public class NativeInterface {
     }
     public static native void setPosition(int x,int y);
     public static native void setStrParameter(String strParameter);
+    public static native String getStr();
 }

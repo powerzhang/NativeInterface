@@ -23,6 +23,9 @@ JNIEXPORT void JNICALL Java_com_example_qustzj_application_NativeInterface_setPo
 JNIEXPORT void JNICALL Java_com_example_qustzj_application_NativeInterface_setStrParameter
   (JNIEnv *, jclass, jstring jstr);
 
+JNIEXPORT jstring JNICALL Java_com_example_qustzj_application_NativeInterface_getStr
+  (JNIEnv *, jclass);
+
 #ifdef __cplusplus
 }
 #endif
